@@ -171,24 +171,6 @@ The @docker presentation to beat is https://github.com/jbarratt/dockertalk …. 
                     </aside>
                 </section>
                 <section>
-                    <h2>... 3 months later</h2>
-                    <p>
-                    7. There's a new openssl package out, very urgent security issue!
-                    </p>
-                    <ul>
-                        <li>Huh.</li>
-                        <li class="fragment">Can I push it?</li>
-                        <li class="fragment">Which apps use it?</li>
-                        <li class="fragment">Which apps will break?</li>
-                    </ul>
-                    <p class="fragment">
-                    Oh, and we're also stuck if one of those apps gets exploited, or tries to use all the resources on the box...
-                    </p>
-                    <aside class="notes">
-                    It's a hot mess.
-                    </aside>
-                </section>
-                <section>
                     <h2>Netflix Model</h2>
                     <ul>
                         <li>Bake an entire server image</li>
@@ -325,22 +307,6 @@ The @docker presentation to beat is https://github.com/jbarratt/dockertalk …. 
                         <li>Can be layered (e.g. OpenShift, SELinux)</li>
                         <li>Lower priv mode coming soon</li>
                         <li>Docker Index, Handle With Care. (Build Dockerfiles)</li>
-                    </ul>
-                    <aside class="notes">
-                    </aside>
-                </section>
-                <section data-background="img/crusty_lock.jpg">
-                    <h2>New Challenges: Increased surface area & sprawl. (openssl!)</h2>
-                    <ul>
-                        <li class="fragment">Can't just check w/ each box's package manager.</li>
-                        <li class="fragment">More apps means more apps means more to learn. Making it easy to deploy node doesn't mean your ops team knows how, follows the right security lists, etc.</li>
-                    </ul>
-                    <h3 class="fragment">BUT</h3>
-                    <ul>
-                        <li class="fragment">Less cases where this happens, only the libs we care about. (not sshd too, for example.)</li>
-                        <li class="fragment">Low surface area if an exploit does happen</li>
-                        <li class="fragment">Lower friction to do upgrades (mysql vs apache2)</li>
-                        <li class="fragment">Proper Docker layering actually means less sprawl than you think.</li>
                     </ul>
                     <aside class="notes">
                     </aside>
